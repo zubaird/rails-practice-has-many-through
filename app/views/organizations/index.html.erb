@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Organizations</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @organizations.each do |organization| %>
+      <tr>
+        <td>
+          <%= link_to organization.name, organization_path(organization) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
