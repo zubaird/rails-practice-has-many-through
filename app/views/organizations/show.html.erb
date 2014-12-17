@@ -13,9 +13,12 @@
     </tr>
   </thead>
   <tbody>
+
     <div class="well">
-      Replace me with a list of person names that this organization
-      is connected to, via employments.
+      <% @organization.people.each do |person| %>
+      <%= person.name %>
+      <% end %>
     </div>
+
   </tbody>
 </table>
